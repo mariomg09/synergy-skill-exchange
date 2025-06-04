@@ -1,60 +1,72 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, Search, Calendar } from "lucide-react";
+import { ArrowRight, Zap, Target, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-green-600/5"></div>
-      <div className="absolute top-10 left-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 right-10 w-72 h-72 bg-green-200/30 rounded-full blur-3xl"></div>
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-black text-white">
+      {/* Background decoration with yellow accents */}
+      <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-orange-500/5"></div>
+      <div className="absolute top-20 left-20 w-32 h-32 bg-yellow-400/20 rounded-full blur-2xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-40 h-40 bg-orange-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-yellow-300/10 rounded-full blur-3xl"></div>
       
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Tukar <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Skill</span>,
-            <br />
-            Kembangkan <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Potensi</span>
-          </h1>
+          {/* Antimainstream header with scattered text */}
+          <div className="mb-8 relative">
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-4 tracking-tight">
+              SKILL
+            </h1>
+            <div className="relative">
+              <h1 className="text-6xl md:text-8xl font-black bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent transform -rotate-2">
+                SWAP
+              </h1>
+              <Sparkles className="absolute -top-4 -right-8 h-8 w-8 text-yellow-400 animate-bounce" />
+            </div>
+            <Zap className="absolute top-0 left-1/4 h-6 w-6 text-orange-400 animate-ping" />
+          </div>
           
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Platform inovatif untuk mahasiswa yang ingin bertukar keterampilan. 
-            Belajar hal baru sambil mengajar keahlian yang kamu miliki. 
-            Gratis, mudah, dan efektif!
-          </p>
+          {/* Antimainstream tagline */}
+          <div className="space-y-4 mb-8">
+            <p className="text-xl md:text-2xl text-gray-300 font-medium">
+              🔥 Tuker skill kayak trading card
+            </p>
+            <p className="text-lg md:text-xl text-yellow-400 font-semibold">
+              Gak cuma belajar, tapi juga ngajar!
+            </p>
+          </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          {/* Call to action with antimainstream style */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <Link to="/register">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-3 text-lg">
-                Mulai Bertukar Skill
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-yellow-500/25 transition-all duration-300 transform hover:scale-105">
+                Gabung Sekarang!
+                <Target className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link to="/how-it-works">
-              <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg">
-                Pelajari Cara Kerja
+              <Button size="lg" variant="outline" className="border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500/10 px-8 py-4 text-lg rounded-full font-semibold">
+                Gimana Caranya?
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
           
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-blue-100">
-              <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-gray-900">1000+</div>
-              <div className="text-gray-600">Mahasiswa Aktif</div>
+          {/* Stats with different layout */}
+          <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
+            <div className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-4 border border-yellow-500/30 transform rotate-1">
+              <div className="text-2xl md:text-3xl font-black text-yellow-400">1K+</div>
+              <div className="text-gray-300 text-sm">Mahasiswa</div>
             </div>
-            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-green-100">
-              <Search className="h-12 w-12 text-green-600 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-gray-900">500+</div>
-              <div className="text-gray-600">Skill Tersedia</div>
+            <div className="bg-gradient-to-br from-orange-500/20 to-yellow-500/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-500/30 transform -rotate-1">
+              <div className="text-2xl md:text-3xl font-black text-orange-400">500+</div>
+              <div className="text-gray-300 text-sm">Skills</div>
             </div>
-            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-blue-100">
-              <Calendar className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-gray-900">2000+</div>
-              <div className="text-gray-600">Sesi Tukar Skill</div>
+            <div className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-4 border border-yellow-500/30 transform rotate-2">
+              <div className="text-2xl md:text-3xl font-black text-yellow-400">2K+</div>
+              <div className="text-gray-300 text-sm">Exchanges</div>
             </div>
           </div>
         </div>
