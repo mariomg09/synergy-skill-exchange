@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import QuickStart from "@/components/QuickStart";
 import HowItWorks from "@/components/HowItWorks";
+import Founder from "@/components/Founder";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
       <QuickStart />
       <Features />
       <HowItWorks />
+      <Founder />
       <Footer />
     </div>
   );
