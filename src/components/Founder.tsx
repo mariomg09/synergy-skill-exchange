@@ -6,7 +6,7 @@ const founders = [
         id: 1,
         name: "Christopher Satya Fredella Balakosa",
         npm: "2206059755",
-        role: "Co-Founder",
+        role: "giFounder",
         image: "/founders/1.jpg" // Pastikan file ada di public/founders/
     },
     {
